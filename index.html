@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TU STUCCO | Premium Stucco & Plaster Finishes</title>
+  <meta name="description" content="Professional stucco installation, repair, restoration, and plaster finishes for homes and businesses." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f0ea;
+      --surface: #f8f5f1;
+      --surface-2: #ede6de;
+      --text: #272727;
+      --muted: #655f59;
+      --line: rgba(39, 39, 39, 0.1);
+      --dark: #4e4e4e;
+      --dark-2: #323232;
+      --accent: #a68452;
+      --accent-soft: #d8c5a2;
+      --white: #ffffff;
+      --max: 1200px;
+      --radius: 30px;
+      --shadow: 0 20px 70px rgba(0, 0, 0, 0.08);
+      --shadow-soft: 0 12px 34px rgba(0, 0, 0, 0.05);
+      --transition: 320ms cubic-bezier(.2,.8,.2,1);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.45;
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    img { display: block; width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--max));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 6rem 0;
+    }
+
+    .section-tight {
+      padding-top: 4rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    h1, h2, h3, h4, p { margin: 0; }
+    h1, h2, h3, h4 { letter-spacing: -0.045em; }
+
+    h1 {
+      font-size: clamp(3.2rem, 7vw, 6.2rem);
+      line-height: 0.95;
+      max-width: 8.6ch;
+    }
+
+    h2 {
+      font-size: clamp(2.3rem, 5vw, 4.3rem);
+      line-height: 0.98;
+    }
+
+    h3 {
+      font-size: clamp(1.35rem, 2.3vw, 2rem);
+      line-height: 1.02;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      max-width: 62ch;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 172px;
+      padding: 1rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid rgba(39, 39, 39, 0.14);
+      background: transparent;
+      color: var(--text);
+      font-weight: 600;
+      transition: transform var(--transition), background var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn.primary {
+      background: var(--text);
+      color: var(--white);
+      border-color: var(--text);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn.primary:hover {
+      background: #151515;
+      border-color: #151515;
+    }
+
+    .btn.secondary {
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn.secondary:hover {
+      background: rgba(39, 39, 39, 0.06);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 80;
+      backdrop-filter: blur(14px);
+      background: rgba(244, 240, 234, 0.82);
+      border-bottom: 1px solid rgba(39, 39, 39, 0.06);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.95rem;
+      font-weight: 800;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: linear-gradient(145deg, #b69462, #8c6c3f);
+      color: #fff6e8;
+      font-family: Georgia, serif;
+      font-size: 1.45rem;
+      box-shadow: 0 14px 28px rgba(166, 132, 82, 0.24);
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .brand-text small {
+      font-size: 0.66rem;
+      color: var(--muted);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.28rem;
+      font-weight: 700;
+    }
+
+    .brand-text strong {
+      font-size: 1.08rem;
+      letter-spacing: -0.04em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.96rem;
+      font-weight: 500;
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.85rem 1.2rem;
+      border-radius: 999px;
+      background: var(--text);
+      color: var(--white);
+      font-weight: 600;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .mobile-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      border: 1px solid rgba(39, 39, 39, 0.08);
+      background: rgba(255,255,255,0.55);
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .mobile-toggle span,
+    .mobile-toggle::before,
+    .mobile-toggle::after {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 2px;
+      margin: 5px auto;
+      background: var(--text);
+      transition: transform var(--transition), opacity var(--transition);
+    }
+
+    .mobile-toggle.is-open span { opacity: 0; }
+    .mobile-toggle.is-open::before { transform: translateY(7px) rotate(45deg); }
+    .mobile-toggle.is-open::after { transform: translateY(-7px) rotate(-45deg); }
+
+    .hero {
+      padding: 2.6rem 0 4.5rem;
+    }
+
+    .hero-shell {
+      position: relative;
+      min-height: 86vh;
+      border-radius: 38px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(90deg, rgba(244, 240, 234, 0.94) 0%, rgba(244, 240, 234, 0.76) 38%, rgba(244, 240, 234, 0.18) 100%),
+        url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display: grid;
+      align-items: end;
+    }
+
+    .hero-shell::after {
+      content: "";
+      position: absolute;
+      inset: auto auto 1.4rem 1.4rem;
+      width: 180px;
+      height: 180px;
+      border-radius: 32px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.18), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.28);
+      backdrop-filter: blur(8px);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 2rem;
+      padding: clamp(2rem, 4vw, 4rem);
+    }
+
+    .hero-copy {
+      align-self: end;
+      max-width: 700px;
+    }
+
+    .hero-copy p {
+      max-width: 620px;
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      color: rgba(39, 39, 39, 0.82);
+    }
+
+    .hero-card {
+      align-self: end;
+      justify-self: end;
+      width: min(100%, 380px);
+      background: rgba(255, 255, 255, 0.42);
+      border: 1px solid rgba(255, 255, 255, 0.52);
+      backdrop-filter: blur(12px);
+      padding: 1.6rem;
+      border-radius: 28px;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+    }
+
+    .hero-card p { color: rgba(39,39,39,0.74); font-size: 0.98rem; }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.85rem;
+      margin-top: 1.35rem;
+    }
+
+    .hero-stats div {
+      padding-top: 0.9rem;
+      border-top: 1px solid rgba(39, 39, 39, 0.12);
+    }
+
+    .hero-stats strong {
+      display: block;
+      font-size: 1.3rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-stats span {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .section-head {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+
+    .section-head p {
+      margin: 1rem auto 0;
+      max-width: 62ch;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.38);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.7rem;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
+      min-height: 320px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.03);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+      border-color: rgba(39, 39, 39, 0.16);
+      background: rgba(255, 255, 255, 0.62);
+    }
+
+    .card-icon {
+      width: 66px;
+      height: 66px;
+      border-radius: 20px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, #e8ddd0, #f8f4ef);
+      border: 1px solid rgba(39,39,39,0.08);
+      margin-bottom: 1.35rem;
+      font-size: 1.55rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+    }
+
+    .card h3 { margin-bottom: 0.85rem; }
+
+    .card p { font-size: 0.98rem; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about-copy {
+      padding-right: 1rem;
+    }
+
+    .about-copy p + p { margin-top: 1rem; }
+
+    .about-image {
+      position: relative;
+      min-height: 700px;
+      border-radius: 36px;
+      overflow: hidden;
+      background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .about-image::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(0,0,0,0.02));
+    }
+
+    .about-badge {
+      position: absolute;
+      left: 1.2rem;
+      bottom: 1.2rem;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      padding: 1rem 1.1rem;
+      background: rgba(255,255,255,0.42);
+      border: 1px solid rgba(255,255,255,0.5);
+      backdrop-filter: blur(10px);
+      border-radius: 22px;
+      min-width: 170px;
+    }
+
+    .about-badge strong {
+      font-size: 1.4rem;
+      letter-spacing: -0.04em;
+    }
+
+    .about-badge span {
+      color: rgba(39,39,39,0.72);
+      font-size: 0.92rem;
+    }
+
+    .reasons-shell {
+      background: rgba(255,255,255,0.3);
+      border: 1px solid var(--line);
+      border-radius: 36px;
+      padding: clamp(2rem, 4vw, 3.5rem);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .reasons-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .reason {
+      padding: 0 1rem;
+      border-left: 1px solid var(--line);
+    }
+
+    .reason:first-child { border-left: 0; }
+    .reason h3 { margin-bottom: 0.9rem; }
+
+    .projects-head {
+      margin-bottom: 2rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+
+    .project {
+      position: relative;
+      border-radius: 26px;
+      overflow: hidden;
+      min-height: 260px;
+      box-shadow: var(--shadow-soft);
+      background: #ddd;
+      isolation: isolate;
+    }
+
+    .project img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 700ms ease;
+    }
+
+    .project::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.34));
+      z-index: 1;
+    }
+
+    .project:hover img {
+      transform: scale(1.06);
+    }
+
+    .project-caption {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: 2;
+      color: #fff;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .project-caption div span {
+      display: block;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.82;
+      margin-bottom: 0.35rem;
+    }
+
+    .project-caption div strong {
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .pill {
+      padding: 0.62rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.22);
+      backdrop-filter: blur(8px);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .cta {
+      padding: 5rem 0 0;
+    }
+
+    .cta-shell {
+      background: linear-gradient(180deg, #686868, #525252);
+      color: var(--white);
+      border-radius: 34px 34px 0 0;
+      padding: 4.7rem 1.5rem 3.2rem;
+      text-align: center;
+    }
+
+    .cta-shell p {
+      color: rgba(255,255,255,0.84);
+      max-width: 760px;
+      margin: 1rem auto 0;
+    }
+
+    .cta-shell .btn {
+      margin-top: 1.8rem;
+      border-color: rgba(255,255,255,0.26);
+      color: #fff;
+    }
+
+    .cta-shell .btn:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    .footer {
+      background: linear-gradient(90deg, #303030, #373737);
+      color: rgba(255,255,255,0.96);
+      padding: 2.8rem 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .footer-brand .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+    }
+
+    .footer p,
+    .footer a {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.98rem;
+    }
+
+    .footer-center {
+      text-align: center;
+    }
+
+    .footer-right {
+      text-align: right;
+    }
+
+    .footer-stack {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .socials {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .socials a {
+      padding: 0.7rem 0.95rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .socials a:hover {
+      background: rgba(255,255,255,0.13);
+      transform: translateY(-2px);
+    }
+
+    .copyright {
+      color: rgba(255,255,255,0.58);
+      font-size: 0.86rem;
+      margin-top: 2rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 700ms ease, transform 700ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .about-grid,
+      .footer-grid,
+      .reasons-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card,
+      .footer-right,
+      .footer-center {
+        justify-self: start;
+        text-align: left;
+      }
+
+      .socials { justify-content: flex-start; }
+      .reason { border-left: 0; padding: 0; border-top: 1px solid var(--line); padding-top: 1rem; }
+      .reason:first-child { border-top: 0; }
+      .about-image { min-height: 540px; }
+    }
+
+    @media (max-width: 860px) {
+      .nav-links {
+        position: fixed;
+        inset: 78px 1rem auto 1rem;
+        background: rgba(248,245,241,0.98);
+        border: 1px solid rgba(39,39,39,0.08);
+        border-radius: 24px;
+        padding: 1rem;
+        box-shadow: var(--shadow);
+        display: grid;
+        gap: 0.5rem;
+        transform: translateY(-16px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--transition), transform var(--transition);
+      }
+
+      .nav-links.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .nav-links a,
+      .nav-links .nav-cta {
+        padding: 0.9rem 1rem;
+        border-radius: 16px;
+      }
+
+      .nav-links a:hover {
+        background: rgba(39,39,39,0.04);
+      }
+
+      .nav-cta { justify-content: center; }
+      .mobile-toggle { display: inline-block; }
+
+      .services-grid,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-shell {
+        min-height: auto;
+        background:
+          linear-gradient(180deg, rgba(244,240,234,0.92) 0%, rgba(244,240,234,0.7) 42%, rgba(244,240,234,0.18) 100%),
+          url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      }
+
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-card { justify-self: start; }
+      .section { padding: 4.5rem 0; }
+    }
+
+    @media (max-width: 560px) {
+      .container { width: min(calc(100% - 1rem), var(--max)); }
+      .hero { padding-top: 1.2rem; }
+      .hero-shell,
+      .about-image,
+      .reasons-shell,
+      .cta-shell { border-radius: 24px; }
+      .btn { width: 100%; }
+      .btn-row { gap: 0.8rem; }
+      .hero-stats { grid-template-columns: 1fr; }
+      .card { min-height: auto; }
+      .project { min-height: 230px; }
+      .cta-shell { border-radius: 24px 24px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="TU STUCCO Home">
+        <span class="brand-mark">Tu</span>
+        <span class="brand-text">
+          <small>Stucco</small>
+          <strong>TU STUCCO</strong>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+16478021349" class="nav-cta">Call Now</a>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-shell reveal">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <span class="eyebrow">Premium Stucco & Plaster Finishes</span>
+              <h1>Premium Stucco & Plaster Finishes, Done Right.</h1>
+              <p>TU STUCCO delivers durable, high-quality stucco and exterior solutions for homes and businesses with clean workmanship, strong materials, and a polished final result.</p>
+              <div class="btn-row">
+                <a class="btn primary" href="#projects">View Our Work</a>
+                <a class="btn secondary" href="tel:+16478021349">Call for a Quote</a>
+              </div>
+            </div>
+
+            <aside class="hero-card">
+              <span class="eyebrow">Trusted exterior craftsmanship</span>
+              <p>From new installations to repairs and restoration, we focus on clean lines, proper prep, and finishes built to last in Canadian weather.</p>
+              <div class="hero-stats">
+                <div>
+                  <strong>Clean</strong>
+                  <span>Detailed finishing</span>
+                </div>
+                <div>
+                  <strong>Durable</strong>
+                  <span>Exterior-ready systems</span>
+                </div>
+                <div>
+                  <strong>Reliable</strong>
+                  <span>Clear communication</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Services</span>
+          <h2>Stucco & Exterior Services</h2>
+          <p>Clean, durable finishes and reliable workmanship for every project, from new installations to repairs and decorative plaster surfaces.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card reveal">
+            <div class="card-icon">🧱</div>
+            <h3>Stucco Installation</h3>
+            <p>Professional stucco systems for new builds, additions, and renovations, tailored to your property, style, and performance needs.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon">🛠️</div>
+            <h3>Stucco Repair & Restoration</h3>
+            <p>Repair cracks, water-damaged sections, and aging stucco to protect the structure, restore appearance, and extend the life of the finish.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon">🎨</div>
+            <h3>Plaster Finishes</h3>
+            <p>Durable, aesthetic interior and exterior plaster finishes, from ultra-smooth Venetian-inspired looks to more textured surfaces.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <span class="eyebrow">About Us</span>
+            <h2>About TU STUCCO</h2>
+            <p class="lead">TU STUCCO is a construction firm specializing in stucco and exterior finishes for residential and commercial properties.</p>
+            <p>We help homeowners and businesses protect and upgrade their properties with durable, professional finishes. From small fixes to full exterior renovations, we focus on proper preparation, quality materials, and clean workmanship on every project.</p>
+            <p>Our goal is simple: deliver work that looks great, performs in Canadian weather, and stands the test of time.</p>
+            <div class="btn-row">
+              <a class="btn primary" href="#contact">Get In Touch</a>
+            </div>
+          </div>
+
+          <div class="about-image reveal" aria-label="Modern stucco home exterior photo">
+            <div class="about-badge">
+              <strong>Exterior Expertise</strong>
+              <span>Residential & commercial projects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="reasons-shell reveal">
+          <div class="section-head" style="margin-bottom: 0;">
+            <span class="eyebrow">Why Choose Us</span>
+            <h2>Why Choose TU STUCCO?</h2>
+          </div>
+
+          <div class="reasons-grid">
+            <article class="reason">
+              <h3>Quality Materials</h3>
+              <p>We use trusted stucco and exterior systems designed for long-term performance and a cleaner finish.</p>
+            </article>
+            <article class="reason">
+              <h3>Skilled Workmanship</h3>
+              <p>Experienced tradespeople focused on details, surface prep, safety, and durable results.</p>
+            </article>
+            <article class="reason">
+              <h3>Clear Communication</h3>
+              <p>Straightforward timelines, honest updates, and friendly, professional service from start to finish.</p>
+            </article>
+            <article class="reason">
+              <h3>Reliable Timelines</h3>
+              <p>We respect your schedule and work hard to keep projects moving efficiently and cleanly.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="projects-head reveal">
+          <span class="eyebrow">Recent Work</span>
+          <h2>Recent Stucco & Exterior Projects</h2>
+          <p>Browse a selection of residential and commercial exterior work, from fresh stucco installations to repair and finish upgrades.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project reveal">
+            <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=900&q=80" alt="Modern stucco building exterior" />
+            <div class="project-caption">
+              <div>
+                <span>Residential</span>
+                <strong>Modern Exterior Finish</strong>
+              </div>
+              <div class="pill">Smooth Stucco</div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Stucco detail close-up" />
+            <div class="project-caption">
+              <div>
+                <span>Detail Work</span>
+                <strong>Custom Texture & Trim</strong>
+              </div>
+              <div class="pill">Plaster Detail</div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=900&q=80" alt="Construction worker finishing exterior wall" />
+            <div class="project-caption">
+              <div>
+                <span>On Site</span>
+                <strong>Exterior Wall Application</strong>
+              </div>
+              <div class="pill">Commercial</div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80" alt="Contemporary house with beige exterior" />
+            <div class="project-caption">
+              <div>
+                <span>Residential</span>
+                <strong>Contemporary Home Finish</strong>
+              </div>
+              <div class="pill">New Build</div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Beige plaster wall texture" />
+            <div class="project-caption">
+              <div>
+                <span>Texture</span>
+                <strong>Custom Surface Sample</strong>
+              </div>
+              <div class="pill">Finish</div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=900&q=80" alt="Building exterior with stucco walls and windows" />
+            <div class="project-caption">
+              <div>
+                <span>Urban Project</span>
+                <strong>Clean Lines & Durable Finish</strong>
+              </div>
+              <div class="pill">Exterior Upgrade</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-shell reveal">
+          <span class="eyebrow" style="color: rgba(255,255,255,0.72);">Contact</span>
+          <h2>Trusted Stucco & Exterior Professionals</h2>
+          <p>Looking for a reliable stucco and exterior construction partner? TU STUCCO is here to help with projects of all sizes, from small repairs to full exterior upgrades.</p>
+          <a class="btn" href="tel:+16478021349">Call Now</a>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container footer-grid">
+          <div>
+            <div class="footer-brand">
+              <span class="brand-mark">Tu</span>
+              <span class="brand-text">
+                <small style="color: rgba(255,255,255,0.54);">Stucco</small>
+                <strong style="color: #fff;">TU STUCCO</strong>
+              </span>
+            </div>
+            <p class="copyright">© 2024 TU STUCCO. All rights reserved.</p>
+          </div>
+
+          <div class="footer-center footer-stack">
+            <p>186 Hamilton Rd, London, Ontario<br>N6B 1N5</p>
+            <a href="tel:+16478021349">+1 (647) 802 13 49</a>
+            <a href="mailto:tustucco@gmail.com">tustucco@gmail.com</a>
+          </div>
+
+          <div class="footer-right footer-stack">
+            <p><strong style="color:#fff; font-size:1.05rem;">@tu.stucco</strong></p>
+            <div class="socials">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="mailto:tustucco@gmail.com">Email</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    const body = document.body;
+
+    if (mobileToggle && navLinks) {
+      mobileToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('show');
+        mobileToggle.classList.toggle('is-open', isOpen);
+        mobileToggle.setAttribute('aria-expanded', String(isOpen));
+        body.classList.toggle('menu-open', isOpen);
+      });
+
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('show');
+          mobileToggle.classList.remove('is-open');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+          body.classList.remove('menu-open');
+        });
+      });
+    }
+
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
